@@ -2,15 +2,18 @@
 #include <stdio.h>
 #include <string.h>
 
+char *ft_strcpy(char *dest, char *src);
+
 int	main()
 {
-	char src[] = "beautiful";
-	char src1[] = "beautiful";
 	char dest[] = "Wo";
-	char dest1[] = "Wo";
-	printf("%s", ft_strcpy(dest, src));
+	char src[] = "beautiful";
+
+	printf("dest: %s\n" ,dest);
+	printf("src: %s\n" ,src);
+	printf("copy: %s", ft_strcpy(dest, src));
     printf("\n");
-	printf("%s", strcpy(dest1, src1));
+	// printf("%s", strcpy(dest1, src1));
 }
 // char *ft_strcpy(char *dest, char *src)
 // {
