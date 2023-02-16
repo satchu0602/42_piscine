@@ -6,7 +6,7 @@
 /*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 07:13:25 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/16 07:23:14 by skameyam         ###   ########.fr       */
+/*   Updated: 2023/02/16 14:41:24 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,25 +35,25 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-void	ft_strlowcase (char *c)
+void	ft_strlowcase(char *c)
 {
 	if (*c >= 'A' && *c <= 'Z')
-		*c += 32;}
+		*c += 32;
 }
 
-void	ft_strupcase (char *c)
+void	ft_strupcase(char *c)
 {
-	if(*c >= 'a' && *c <= 'z')
+	if (*c >= 'a' && *c <= 'z')
 		*c -= 32;
 }
 
-int	ft_other (char *c)
+int	ft_other(char *c)
 {
 	if ((*c >= 'a') && (*c <= 'z'))
-		return 0;
+		return (0);
 	else if ((*c >= 'A') && (*c <= 'Z'))
-		return 0;
+		return (0);
 	else if (*c >= '0' && *c <= '9')
-		return 0;
+		return (0);
 	return (1);
 }
