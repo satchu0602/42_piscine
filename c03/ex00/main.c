@@ -8,4 +8,7 @@ int	main()
 	printf("\n%d", ft_strcmp("Hello", "He"));
 	printf("\n%d", ft_strcmp("He", "Hello"));
 	printf("\n%d", ft_strcmp("Hello", "Hello"));
+	printf("\n%d", ft_strcmp("Hello", "Hello"));
+	printf("\n%d", ft_strcmp("", ""));
+	printf("\n%d", ft_strcmp("", "o"));
 }

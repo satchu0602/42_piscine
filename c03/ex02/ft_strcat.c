@@ -1,6 +1,4 @@
 #include <unistd.h>
-#include <.h>
-
 
 char *ft_strcat(char *dest, char *src)
 {
@@ -10,7 +8,7 @@ char *ft_strcat(char *dest, char *src)
     i = 0;
     while(dest[i] != '\0')
         i ++;
-        j = 0;
+    j = 0;
     while(src[j] !='\0')
     {
         dest[i] = src[j];
@@ -19,11 +17,4 @@ char *ft_strcat(char *dest, char *src)
     }
     dest[i] ='\0';
     return(dest);
-}
-
-int main()
-{
-    char src[]= "genki";
-    char dest[]= "115";
-    printf("%s", ft_strcat(dest, src) );
 }
