@@ -24,3 +24,31 @@ $>./wdmatch "error" rrerrrfiiljdfxjyuifrrvcoojh | cat -e
 $
 $>./wdmatch | cat -e
 $
+
+アサインメント名：wdmatch
+想定されるファイル：wdmatch.c
+許可された関数 : write
+--------------------------------------------------------------------------------
+
+つの文字列を受け取り、2番目の文字列の文字で1番目の文字列を書き込むことが可能かどうか
+2つの文字列を受け取り、最初の文字列を2番目の文字列の文字で書き込むことが可能かどうかを
+このとき、2番目の文字列の文字列の順番は無視されます。
+
+可能であれば、その文字列を表示し、その後に「◎」を表示します。
+を表示します。
+
+引数の数が2つでない場合は、"not a \n "と表示されます。
+
+例
+
+例: $>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
+faya$
+$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e
+$
+$>./wdmatch "quarante deux" "qfqfsudf arzgsayns tsregfdgs sjytdekuoixq " | cat -e
+quarante deux$
+$>./wdmatch "error" rrerrfiiljdfxjyuifrrvcoojh | cat -e
+$
+$>./wdmatch | cat -e
+$
+

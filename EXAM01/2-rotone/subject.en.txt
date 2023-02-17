@@ -26,3 +26,32 @@ $>
 $>./rotone "" | cat -e
 $
 $>
+
+アサインメント名：rotone
+想定されるファイル：rotone.c
+許可された関数 : write
+--------------------------------------------------------------------------------
+
+文字列を受け取り、アルファベット順に次の文字に置き換えて表示するプログラ
+文字列を受け取り、アルファベット順に次の文字に置き換えて表示するプログラムを書いてください。
+
+z'は'a'になり、'Z'は'A'になります。大文字小文字は影響されません。
+
+出力の後には、" \n" が付きます。
+
+引数の数が1でない場合は、" \n" と表示されます。
+
+例
+
+例）$>./rotone "abc"
+bcd
+$>./rotone "Les stagiaires du staff ne sentent pas toujours tres bon.". | cat -e
+Mft tubhjbjsft ev tubgg of tfoufou qbt upvkpvst usft cpo.$.
+$>./rotone "AkjhZ zLKIJz , 23y " | cat -e
+BlkiA aMLJKa , 23z $.
+$>./rotone | cat -e
+$
+$>
+$>./rotone "" | cat -e
+$
+$>

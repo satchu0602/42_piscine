@@ -21,3 +21,27 @@ $>./inter "rien" "cette phrase ne cache rien" | cat -e
 rien$
 $>./inter | cat -e
 $
+
+アサインメント名：inter
+想定されるファイル：inter.c
+許可された関数 : write
+--------------------------------------------------------------------------------
+
+つの文字列を受け取り、両方の文字列に現れる文字を、最初の文字列に現れる順に、 倍率なしで表示するプログラムを作成しなさい。
+2つの文字列を受け取り、両方の文字列に現れる文字を、最初の文字列に現れる順 に、ダブリなしで表示するプログラムを作成せよ。
+を表示するプログラムを書いてください。
+
+表示の後には、"㊙"が付きます。
+
+引数の数が2でない場合は \n と表示されます。
+
+例を挙げます。
+
+$>./inter "padinton" "paqefwtdjetytjneytjoeyjnejeyj" | cat -e
+padinto$
+$>./inter ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd | cat -e
+df6ewg4$
+$>./inter "rien" "cette phrase ne cache rien" です。| cat -e
+rien$
+$>./inter | cat -e
+$

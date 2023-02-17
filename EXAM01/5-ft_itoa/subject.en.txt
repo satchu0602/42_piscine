@@ -9,3 +9,15 @@ The function returns the result in a char array that you must allocate.
 Your function must be declared as follows:
 
 char	*ft_itoa(int nbr);
+
+アサインメント名：ft_itoa
+想定されるファイル：ft_itoa.c
+使用可能な関数 : malloc
+--------------------------------------------------------------------------------
+
+intを受け取り、それをヌル文字で終端する文字列に変換する関数を書いてください。
+この関数は、結果を char 配列で返しますが、この配列を割り当てる必要があります。
+
+この関数は、次のように宣言する必要があります。
+
+char *ft_itoa(int nbr);

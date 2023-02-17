@@ -25,3 +25,31 @@ $>
 $>./union "rien" | cat -e
 $
 $>
+
+アサインメント名：union
+想定されるファイル：union.c
+許可された関数 : write
+--------------------------------------------------------------------------------
+
+つの文字列を受け取り、どちらかの文字列に現れる文字をダブりなく表示するプログ ラムを作成しなさい。
+表示するプログラムを書いて下さい。
+
+表示方法は、コマンドラインでの文字の並び順で、表示された文字列の後に
+の後に"Ⓐ"が付きます。
+
+引数の数が2でない場合は"˶‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾"と表示されます。
+
+例
+
+$>./union zpadinton "paqefwtdjetytjneytjoeyjnejeyj" | cat -e
+zpadintoqefwjy$ です。
+$>./union ddf6vewg64f gtwthgdwthdwfteewhrtag6h4ffdhsd | cat -e
+df6vewg4thras$
+$>./union "rien" "cette phrase ne cache rien" です。| cat -e
+rienct phas$
+$>./union | cat -e
+$
+$>
+$>./union "リエン" | cat -e
+$
+$>

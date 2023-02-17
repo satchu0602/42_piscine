@@ -1,0 +1,22 @@
+アサインメント名：ft_strlen
+想定されるファイル：ft_strlen.c
+許可された関数 
+--------------------------------------------------------------------------------
+
+文字列の長さを返す関数を書いてください。
+
+関数は以下のように宣言されている必要があります。
+
+int ft_strlen(char *str);
+
+
+Assignment name  : ft_strlen
+Expected files   : ft_strlen.c
+Allowed functions: 
+--------------------------------------------------------------------------------
+
+Write a function that returns the length of a string.
+
+Your function must be declared as follows:
+
+int	ft_strlen(char *str);

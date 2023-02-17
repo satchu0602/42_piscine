@@ -1,0 +1,13 @@
+#include <unistd.h>
+
+int		main(void)
+{
+	write(1, "z", 1);
+	return (0);
+}
+
+
+;アサインメント名：only_z
+;想定されるファイル：only_z.c
+ 許可された関数 : write
+; 標準出力に 'z' 文字を表示するプログラムを作成せよ。

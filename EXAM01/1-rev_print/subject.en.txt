@@ -17,3 +17,23 @@ $> ./rev_print "dub0 a POIL" | cat -e
 LIOP a 0bud$
 $> ./rev_print | cat -e
 $
+
+アサインメント名：rev_print
+想定されるファイル：rev_print.c
+許可された関数 : write
+--------------------------------------------------------------------------------
+
+文字列を受け取り、その文字列を改行の後に逆順に表示する関数を作成しなさい。
+を逆順に表示する関数を書いて下さい。
+そのプロトタイプは次のように構成されます。
+  char *ft_rev_print (char *str)
+この関数は、引数を返す必要があります。
+
+例
+
+例: $> ./rev_print "zaz" | cat -e
+zaz$
+$> ./rev_print "ダブ0アPOIL" | cat -e
+LIOP a 0bud$
+$> ./rev_print | cat -e
+$
