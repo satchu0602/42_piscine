@@ -2,11 +2,14 @@
 #include <stdio.h>
 
 unsigned int ft_strlcat(char *dest, char *src, unsigned int size);
+int	ft_strlen(char *str);
 
 int main (void)
 {
-	char src[] = "Born to code";
-    char dest [] = "1337 42";
-    printf("%i \n", ft_strlcat(dest, src, 15));
-    printf("%s \n", dest);
+    char dest [] = "133742";
+	char src[] = "getdestination";
+    printf("dest;%d \n", ft_strlen(dest));
+	printf("src;%d \n", ft_strlen(src));
+    printf("answer;%i \n", ft_strlcat(dest, src, 9));
+    printf("dest;%s \n", dest);
 }
