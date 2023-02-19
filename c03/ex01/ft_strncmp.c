@@ -1,30 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/18 23:39:36 by skameyam          #+#    #+#             */
+/*   Updated: 2023/02/18 23:41:57 by skameyam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-// int ft_strncmp(char *s1, char *s2, unsigned int n)
-// {
-// 	unsigned int	i;
-// 	i = 0;
-// 	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
-// 	{
-//         // if (s1[i] > s2[i])
-//         //     return (1);
-//         // else if (s1[i] < s2[i])
-//         //     return (-1);
-//         // i++;
-// 	}   
-//     return  (0);
-// }
-
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-        if(s1[i] != s2[i])
-            return(s1[i] - s2[i]);
-        i++;
-    }
-    return  (0);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }

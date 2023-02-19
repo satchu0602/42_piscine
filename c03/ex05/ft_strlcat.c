@@ -1,25 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 23:38:58 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/18 23:39:22 by skameyam         ###   ########.fr       */
+/*   Created: 2023/02/18 23:56:17 by skameyam          #+#    #+#             */
+/*   Updated: 2023/02/18 23:59:08 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strlen(char *str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && (s1[i] != '\0' || s2[i] != '\0'))
+	while (str[i] != '\0')
 	{
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (i);
+}
+
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+{
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	dlen;
+	unsigned int	slen;
+
+	i = 0;
+	j = 0;
+	while (dest[j] != '\0')
+	j++;
+	dlen = j;
+	slen = ft_strlen(src);
+	if (size == 0 || size <= dlen)
+		return (slen + size);
+	while (src[i] != '\0' && i < size - dlen -1)
+	{
+		dest[j] = src[i];
+		i++;
+		j++;
+	}
+	dest[j] = '\0';
+	return (dlen + slen);
 }
