@@ -1,32 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 17:44:42 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/21 17:44:45 by skameyam         ###   ########.fr       */
+/*   Created: 2023/02/21 14:44:35 by skameyam          #+#    #+#             */
+/*   Updated: 2023/02/21 14:45:16 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*#include <stdio.h>*/
 #include <unistd.h>
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
+	write(1, &c, 1);
 }
 
-int	main(int argc, char *argv[])
+void	ft_putnbr(int nb)
 {
-	int	i;
-
-	i = 0;
-	while (argv[0][i] != '\0' && argc)
+	if (nb == -2147483648)
 	{
-		ft_putchar(argv[0][i]);
-		++i;
+		ft_putchar('-');
+		ft_putchar('2');
+		ft_putnbr(147483648);
 	}
-	ft_putchar('\n');
-	return (0);
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+		ft_putnbr(nb);
+	}
+	else if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + 48);
 }
+/*int main (void)
+{
+	ft_putnbr(4563);
+}*/

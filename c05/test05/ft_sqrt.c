@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 17:44:42 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/21 17:44:45 by skameyam         ###   ########.fr       */
+/*   Created: 2023/02/22 02:56:33 by skameyam          #+#    #+#             */
+/*   Updated: 2023/02/22 03:01:13 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
-
-int	main(int argc, char *argv[])
+int	ft_sqrt(int nb)
 {
 	int	i;
 
-	i = 0;
-	while (argv[0][i] != '\0' && argc)
+	if (nb <= 0)
+		return (0);
+	else if (nb == 1)
+		return (1);
+	else if (nb >= 2)
+	i = 2;
+	while (i * i <= nb)
 	{
-		ft_putchar(argv[0][i]);
-		++i;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
-	ft_putchar('\n');
 	return (0);
 }
+/*int main()
+{
+    printf("%d\n", ft_sqrt(1));
+    printf("%d\n", ft_sqrt(0));
+    printf("%d\n", ft_sqrt(9));
+    printf("%d\n", ft_sqrt(7));
+
+    return 0;
+}*/

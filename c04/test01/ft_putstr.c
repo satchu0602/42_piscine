@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 17:44:42 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/21 17:44:45 by skameyam         ###   ########.fr       */
+/*   Created: 2023/02/21 14:41:00 by skameyam          #+#    #+#             */
+/*   Updated: 2023/02/21 14:43:15 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+/*#include <stdio.h>*/
 
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
-
-int	main(int argc, char *argv[])
+void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (argv[0][i] != '\0' && argc)
+	while (str[i] != '\0')
 	{
-		ft_putchar(argv[0][i]);
-		++i;
+		write (1, &str[i], 1);
+		i++;
 	}
-	ft_putchar('\n');
-	return (0);
 }
+/*int main()
+{
+    ft_putstr("factrial");
+}*/

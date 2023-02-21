@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 17:44:42 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/21 17:44:45 by skameyam         ###   ########.fr       */
+/*   Created: 2023/02/21 14:32:08 by skameyam          #+#    #+#             */
+/*   Updated: 2023/02/21 14:40:30 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write (1, &c, 1);
-}
-
-int	main(int argc, char *argv[])
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (argv[0][i] != '\0' && argc)
+	while (str[i] != '\0')
 	{
-		ft_putchar(argv[0][i]);
-		++i;
+		i++;
 	}
-	ft_putchar('\n');
-	return (0);
+	return (i);
 }
