@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <unistd.h>
 
 void ft_putnbr_base(int nbr, char *base) {
@@ -45,3 +46,20 @@ int main(void) {
     ft_putnbr_base(nbr, base);
     return 0;
 }
+=======
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/21 14:52:38 by skameyam          #+#    #+#             */
+/*   Updated: 2023/02/21 15:39:42 by skameyam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putnbr_base(int nbr, char *base);
+>>>>>>> 24513508c645d5a8e080dbb1f90e97ed84a91509
