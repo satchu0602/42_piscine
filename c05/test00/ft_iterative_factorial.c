@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+// #include <unistd.h>
 
 int	ft_iterative_factorial(int nb)
 {
-	unsigned int	ans;
+	int	ans;
 
 	ans = 1;
 	while (0 < nb)
