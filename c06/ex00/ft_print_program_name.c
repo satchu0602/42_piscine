@@ -13,7 +13,7 @@ int	main(int argc, char *argv[])
 	while (argv[0][i] != '\0' && argc)
 	{
 		ft_putchar(argv[0][i]);
-		++i;
+		i++;
 	}
 	ft_putchar('\n');
 	return (0);
