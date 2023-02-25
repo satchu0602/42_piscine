@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-// #include <stdio.h>
-
 int	ft_is_prime(int nb)
 {
 	long int	i;
@@ -21,8 +18,10 @@ int	ft_is_prime(int nb)
 		return (0);
 	if (nb == 2)
 		return (1);
+	if (nb % 2 == 0)
+		return (0);
 	i = 3;
-	while (i < nb / i)
+	while (i <= nb / i)
 	{
 		if (nb % i == 0)
 			return (0);
@@ -43,6 +42,8 @@ int	ft_find_next_prime(int nb)
 	}
 	return (0);
 }
+// #include <unistd.h>
+// #include <stdio.h>
 // int main()
 // {
 //     printf("%d -> %d\n", -3965, ft_find_next_prime(-3965));
@@ -54,6 +55,7 @@ int	ft_find_next_prime(int nb)
 // 	printf("素数：%d -> %d\n", 7853, ft_find_next_prime(7853));
 // 	printf("素数：%d -> %d\n", 78989, ft_find_next_prime(78989));
 // 	printf("素数：%d -> %d\n", 2147483647, ft_find_next_prime(2147483647));
+// 	printf("%d -> %d\n", 4, ft_find_next_prime(4));
 // 	printf("%d -> %d\n", 200, ft_find_next_prime(200));
 // 	printf("%d -> %d\n", 201, ft_find_next_prime(201));
 // 	printf("%d -> %d\n", 202, ft_find_next_prime(202));

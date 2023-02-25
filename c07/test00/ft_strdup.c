@@ -1,7 +1,7 @@
-#include <unistd.h>
+// #include <unistd.h>
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+// #include <string.h>
+// #include <stdio.h>
 
 int	ft_str_length(char *str)
 {
@@ -17,13 +17,12 @@ char	*ft_strdup(char *src)
 {
 	int		index;
 	char	*dest;
-	char	*d;
 
 	index = 0;
-	d = ((dest = (char *)malloc(ft_str_length(src) * sizeof(char) + 1)));
-	if (!d)
+	dest = (char *)malloc(ft_str_length(src) * sizeof(char) + 1));
+	if (dest == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 	while (src[index])
 	{
@@ -33,15 +32,15 @@ char	*ft_strdup(char *src)
 	dest[index] = '\0';
 	return (dest);
 }
-int		main(void)
-{
-	char	*str;
-	char	*allocated;
+// int		main(void)
+// {
+// 	char	*str;
+// 	char	*allocated;
 
-	str = "Hello World with malloc()";
-	printf("original  : base  : $%s$ @ %p\n", str, str);
-	allocated = strdup(str);
-	printf("copied    : alloc : $%s$ @ %p\n", allocated, allocated);
-	allocated = ft_strdup(str);
-	printf("ft_copied : alloc : $%s$ @ %p\n", allocated, allocated);
-}
+// 	str = "Hello World with malloc()";
+// 	printf("original  : base  : $%s$ @ %p\n", str, str);
+// 	allocated = strdup(str);
+// 	printf("copied    : alloc : $%s$ @ %p\n", allocated, allocated);
+// 	allocated = ft_strdup(str);
+// 	printf("ft_copied : alloc : $%s$ @ %p\n", allocated, allocated);
+// }

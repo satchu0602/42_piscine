@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-/*#include <stdio.h>*/
-
 int	ft_recursive_power(int nb, int power)
 {
-	if (nb == 0)
-		return (1);
-	else if (power < 0)
+	if (power < 0)
 		return (0);
 	else if (power > 0)
 		return (nb * ft_recursive_power (nb, power - 1));
 	return (1);
 }
-/*int main()
-{
-    printf("%d\n", ft_recursive_power(5, 0));
-    printf("%d\n", ft_recursive_power(5, -2));
-    printf("%d\n", ft_recursive_power(5, 2));
-    return 0;
-}
-*/
+// #include <unistd.h>
+// #include <stdio.h>
+// int main()
+// {
+//     printf("%d\n", ft_recursive_power(5, 0));
+//     printf("%d\n", ft_recursive_power(5, -2));
+//     printf("%d\n", ft_recursive_power(5, 2));
+//     printf("%d\n", ft_recursive_power(0, 2));
+//     printf("%d\n", ft_recursive_power(0, 0));
+//     printf("%d\n", ft_recursive_power(-5, 3));
+
+//     return 0;
+// }

@@ -10,16 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-// #include <stdio.h>
-
 int	ft_iterative_power(int nb, int power)
 {
 	int	ans;
 
 	ans = 1;
-	if (nb == 0)
-		return (1);
 	if (power < 0)
 		return (0);
 	while (power != 0)
@@ -29,12 +24,16 @@ int	ft_iterative_power(int nb, int power)
 	}
 	return (ans);
 }
-
+// #include <unistd.h>
+// #include <stdio.h>
 // int main()
 // {
 //     printf("%d\n", ft_iterative_power(5, 0));
 //     printf("%d\n", ft_iterative_power(5, -2));
 //     printf("%d\n", ft_iterative_power(5, 3));
+// 	printf("%d\n", ft_iterative_power(0, 3));
+// 	printf("%d\n", ft_iterative_power(0, 0));
+// 	printf("%d\n", ft_iterative_power(-5, 3));
 
 //     return 0;
 // }

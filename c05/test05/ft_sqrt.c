@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-// #include <stdio.h>
-
 int	ft_sqrt(int nb)
 {
-	int	i;
+	long int	i;
 
 	i = 0;
 	if (nb <= 0)
@@ -32,12 +29,16 @@ int	ft_sqrt(int nb)
 	}
 	return (0);
 }
+// #include <unistd.h>
+// #include <stdio.h>
+// #include <limits.h>
 // int main()
 // {
 //     printf("%d\n", ft_sqrt(1));
 //     printf("%d\n", ft_sqrt(0));
 //     printf("%d\n", ft_sqrt(9));
 //     printf("%d\n", ft_sqrt(7));
-
+//     printf("%d\n", ft_sqrt(4));
+// 	printf("%d\n", ft_sqrt(INT_MAX));
 //     return 0;
 // }
