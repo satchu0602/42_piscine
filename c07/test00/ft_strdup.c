@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/27 05:40:14 by skameyam          #+#    #+#             */
+/*   Updated: 2023/02/27 05:40:33 by skameyam         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 // #include <unistd.h>
-#include <stdlib.h>
 // #include <string.h>
 // #include <stdio.h>
+#include <stdlib.h>
 
 int	ft_str_length(char *str)
 {
@@ -19,11 +31,9 @@ char	*ft_strdup(char *src)
 	char	*dest;
 
 	index = 0;
-	dest = (char *)malloc(ft_str_length(src) * sizeof(char) + 1));
+	dest = (char *)malloc(ft_str_length(src) * sizeof(char) + 1);
 	if (dest == NULL)
-	{
 		return (NULL);
-	}
 	while (src[index])
 	{
 		dest[index] = src[index];
@@ -38,9 +48,9 @@ char	*ft_strdup(char *src)
 // 	char	*allocated;
 
 // 	str = "Hello World with malloc()";
-// 	printf("original  : base  : $%s$ @ %p\n", str, str);
+// 	printf("original  : base  : %s %p\n", str, str);
 // 	allocated = strdup(str);
-// 	printf("copied    : alloc : $%s$ @ %p\n", allocated, allocated);
+// 	printf("copied    : alloc : %s %p\n", allocated, allocated);
 // 	allocated = ft_strdup(str);
-// 	printf("ft_copied : alloc : $%s$ @ %p\n", allocated, allocated);
+// 	printf("ft_copied : alloc : %s %p\n", allocated, allocated);
 // }
