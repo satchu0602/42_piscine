@@ -3,13 +3,80 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: skameyam <skameyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:40:54 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/21 15:41:46 by skameyam         ###   ########.fr       */
+/*   Updated: 2023/02/28 06:36:16 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 int	ft_atoi_base(char *str, char *base);
+int ft_errorshori(char *base);
+
+int ft_errorshori(char *base)
+{
+    int i;
+    int j;
+
+    if(base[0] =='\0' || base[1] == '\0' )
+        return(0);
+    if(base[0] == '+' || base[0] == '-')
+        return(0);
+    i = 0;
+    while(base[i] != '\0')
+    {
+        j = i + 1;
+        while(base[j] !='\0')
+        {
+            if(base[i] == base[j])
+                return(0);
+            j++;
+        }
+        i++;
+    }
+    return(1);
+}
+int	ft_isspace(char c)
+{
+	return (c == ' ' || c == '\t' || c == '\n'
+		|| c == '\r' || c == '\v' || c == '\f');
+
+}
+
+int	sign_processing(char *str, int *ptr_i)
+{
+    int	count;
+    int	i;
+
+    i = 0;
+    count = 1;
+    while (str[i] && ft_isspace(str[i]))
+        i++;
+    while (str[i] && (str[i] == '+' || str[i] == '-'))
+    {
+        if (str[i] == '-')
+            count *= -1;
+        i++;
+    }
+    *ptr_i = i;
+    return (count);
+}
+
+int	ft_atoi(char *str)
+{
+    int	sign;
+    int	result;
+    int	i;
+
+    result = 0;
+    sign = sign_processing(str, &i);
+    while (str[i] && str[i] >= '0' && str[i] <= '9')
+    {
+        result = result * 10 + (str[i] - '0');
+        i++;
+    }
+    result *= sign;
+    return (result);
+}

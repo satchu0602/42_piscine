@@ -1,65 +1,97 @@
-<<<<<<< HEAD
-#include <unistd.h>
-
-void ft_putnbr_base(int nbr, char *base) {
-    // ベースの長さを計算
-    int base_len = 0;
-    while (base[base_len] != '\0') {
-        if (base[base_len] == '+' || base[base_len] == '-') {
-            // 無効なベースが与えられた場合は何も出力せずに関数を終了する
-            return;
-        }
-        for (int j = base_len + 1; base[j] != '\0'; j++) {
-            if (base[j] == base[base_len]) {
-                // 無効なベースが与えられた場合は何も出力せずに関数を終了する
-                return;
-            }
-        }
-        base_len++;
-    }
-    if (base_len <= 1) {
-        // 無効なベースが与えられた場合は何も出力せずに関数を終了する
-        return;
-    }
-
-    // 符号を出力
-    if (nbr < 0) {
-        write(1, "-", 1);
-        nbr = -nbr;
-    }
-
-    // 数値をベースシステムに変換して出力
-    char num_str[32];
-    int i = 0;
-    while (nbr > 0) {
-        num_str[i++] = base[nbr % base_len];
-        nbr /= base_len;
-    }
-    for (int j = i - 1; j >= 0; j--) {
-        write(1, &num_str[j], 1);
-    }
-}
-
-int main(void) {
-    int nbr = 123;
-    char *base = "01";
-    ft_putnbr_base(nbr, base);
-    return 0;
-}
-=======
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skameyam <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: skameyam <skameyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 14:52:38 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/21 15:39:42 by skameyam         ###   ########.fr       */
+/*   Updated: 2023/02/28 06:30:23 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
+int ft_errorshori(char *base);
+int	ft_strlen(char *str);
+void ft_putchar(char c);
 
-void	ft_putnbr_base(int nbr, char *base);
->>>>>>> 24513508c645d5a8e080dbb1f90e97ed84a91509
+void ft_putnbr_base(int nbr, char *base)
+{
+    int error;
+    int nb;
+    int len;
+
+    len = ft_strlen(base);
+    error = ft_errorshori(base);
+    nb = nbr;
+    if(error == 1)
+    {
+        if(nb < 0)
+        {
+            ft_putchar('-');
+            nb *= -1;
+        }
+        if(nb < len)
+            ft_putchar(base[nb]);
+        if(nb >= len)
+        {
+            ft_putnbr_base(nb / len, base);
+            ft_putnbr_base(nb % len, base);
+        }
+    }
+}
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+void ft_putchar(char c)
+{
+    write(1, &c, 1);
+}
+
+int ft_errorshori(char *base)
+{
+    int i;
+    int j;
+
+    if(base[0] =='\0' || base[1] == '\0' )
+        return(0);
+    if(base[0] == '+' || base[0] == '-')
+        return(0);
+    i = 0;
+    while(base[i] != '\0')
+    {
+        j = i + 1;
+        while(base[j] !='\0')
+        {
+            if(base[i] == base[j])
+                return(0);
+            j++;
+        }
+        i++;
+    }
+    return(1);
+}
+
+int		main(void)
+{
+	ft_putnbr_base(-12, "01");
+	printf("\n");
+	ft_putnbr_base(40, "poneyvif");
+	printf("\n");
+	ft_putnbr_base(894867, "0123456789");
+	printf("\n");
+	ft_putnbr_base(53, "0123456789abcdef");
+    printf("\n");
+	ft_putnbr_base(123, "01234234");
+}

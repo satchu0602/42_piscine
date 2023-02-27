@@ -6,7 +6,7 @@
 /*   By: skameyam <skameyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 05:38:06 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/27 06:21:28 by skameyam         ###   ########.fr       */
+/*   Updated: 2023/02/27 18:04:02 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,12 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		return ((char *)malloc(sizeof(char)));
 	full_length = ft_compute_final_length(strs, size, ft_strlen(sep));
 	string = (char *)malloc((full_length + 1) * sizeof(char));
-	d = string;
-	if (!d)
+	if (!string)
 		return (0);
+	*string = '\0';
+	d = string;
 	i = 0;
-	while (i < size)
+	while (++i < size)
 	{
 		ft_strcat(d, strs[i]);
 		d += ft_strlen(strs[i]);
@@ -84,7 +85,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 			ft_strcat(d, sep);
 			d += ft_strlen(sep);
 		}
-		i++;
 	}
 	return (string);
 }
@@ -106,5 +106,5 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 // 	separator = " ";
 // 	result = ft_strjoin(size, strs, separator);
 // 	printf("%s\n", result);
-// 	free(result);
+// 	// free(result);
 // }
