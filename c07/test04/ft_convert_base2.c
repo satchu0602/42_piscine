@@ -1,21 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_convert_base2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skameyam <skameyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 14:52:38 by skameyam          #+#    #+#             */
-/*   Updated: 2023/03/02 04:17:45 by skameyam         ###   ########.fr       */
+/*   Updated: 2023/03/02 05:28:26 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
-
-int		ft_errorshori(char *base);
-int		ft_strlen(char *str);
-void	ft_putchar(char c);
 
 void	ft_putnbr_base(int nbr, char *base)
 {
@@ -83,21 +79,3 @@ int	ft_errorshori(char *base)
 	}
 	return (1);
 }
-
-// int		main(void)
-// {
-// 	ft_putnbr_base(-12, "01");
-// 	printf("\n");
-// 	ft_putnbr_base(40, "poneyvif");
-// 	printf("\n");
-// 	ft_putnbr_base(894867, "0123456789");
-// 	printf("\n");
-// 	ft_putnbr_base(53, "0123456789abcdef");
-//   printf("\n");
-// 	ft_putnbr_base(123, "01234234");
-// 	printf("\n");
-// 	ft_putnbr_base(16, "aa");
-// 	printf("\n");
-// 	ft_putnbr_base(16, "abc+");
-// 	printf("\n");
-// }

@@ -6,7 +6,7 @@
 /*   By: skameyam <skameyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 05:38:06 by skameyam          #+#    #+#             */
-/*   Updated: 2023/02/27 18:04:02 by skameyam         ###   ########.fr       */
+/*   Updated: 2023/03/02 02:28:15 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,23 +88,23 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	}
 	return (string);
 }
-// int	main(void)
-// {
-// 	char	**strs;
-// 	char	*separator;
-// 	char	*result;
-// 	int	size;
+int	main(void)
+{
+	char	**strs;
+	char	*separator;
+	char	*result;
+	int	size;
 
-// 	size = 3;
-// 	strs = (char **)malloc(3 * sizeof(char *));
-// 	strs[0] = (char *)malloc(sizeof(char) * 5 + 1);
-// 	strs[1] = (char *)malloc(sizeof(char) * 7 + 1);
-// 	strs[2] = (char *)malloc(sizeof(char) * 14 + 1);
-// 	strs[0] = "Hello";
-// 	strs[1] = "i'm";
-// 	strs[2] = "skameyam";
-// 	separator = " ";
-// 	result = ft_strjoin(size, strs, separator);
-// 	printf("%s\n", result);
-// 	// free(result);
-// }
+	size = 3;
+	strs = (char **)malloc(3 * sizeof(char *));
+	strs[0] = (char *)malloc(sizeof(char) * 5 + 1);
+	strs[1] = (char *)malloc(sizeof(char) * 7 + 1);
+	strs[2] = (char *)malloc(sizeof(char) * 14 + 1);
+	strs[0] = "Hello";
+	strs[1] = "i'm";
+	strs[2] = "skameyam";
+	separator = " ";
+	result = ft_strjoin(size, strs, separator);
+	printf("%s\n", result);
+	// free(result);
+}

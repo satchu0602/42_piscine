@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_convert_base.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skameyam <skameyam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:40:54 by skameyam          #+#    #+#             */
-/*   Updated: 2023/03/02 04:19:11 by skameyam         ###   ########.fr       */
+/*   Updated: 2023/03/02 06:23:13 by skameyam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+
+void	ft_putnbr_base(int nbr, char *base);
+
 
 int	checkerror(char *str)
 {
@@ -95,17 +98,99 @@ int	ft_atoi_base(char *str, char *base)
 	}
 	return (0);
 }
+¥
 
-// int		main(void)
+
+int	ft_strlen(char *str)
 {
-//     printf("%d\n", ft_atoi_base("FF", "0123456789abcdef")); // 0
-//     printf("%d\n", ft_atoi_base("ff", "0123456789abcdef")); // 255
-    // printf("%d\n", ft_atoi_base("1010", "01")); // 10
-    // printf("%d\n", ft_atoi_base("123", "0123456789")); // 102
-//     printf("%d\n", ft_atoi_base("1000000", "0123456789abcdef")); // 16777216
-// 	printf("%d\n", ft_atoi_base("	+++++--133742", "0123456789"));
-// 	printf("%d\n", ft_atoi_base("	     ---101010", "01"));//-42
-// 	printf("%d\n", ft_atoi_base(" 	+---539", "0123456789abcdef"));//-1337
-// 	printf("%d\n", ft_atoi_base(" 	+---", "0"));
-	// printf("%d\n", ft_atoi_base("435", "8643251907"));
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+// void	ft_putchar(char c)
+// {
+// 	write(1, &c, 1);
+// }
+
+//  int	ft_errorshori(char *base)
+// {
+// 	int	i;
+// 	int	j;
+// 	i = 0;
+// 	if (base[0] == '\0' || base[1] == '\0')
+// 		return (0);
+// 	while (base[i] != '\0')
+// 	{
+// 		if (base[i] == '+' || base[i] == '-' || base[i] <= 32 || base[i] == 127)
+// 			return (0);
+// 		j = i + 1;
+// 		while (base[j] != '\0')
+// 		{
+// 			if (base[i] == base[j])
+// 				return (0);
+// 			j++;
+// 		}
+// 		i++;
+// 	}
+// 	return (1);
+// }
+
+void	ft_putnbr_base_sec(int nbr, char *base, char *nbrf)
+{
+	int			error;
+	long int	nb;
+	int			len;
+
+	len = ft_strlen(base);
+	error = ft_errorshori(base);
+	nb = nbr;
+	if (error == 1)
+	{
+		if (nb < 0)
+		{
+			ft_putchar ('-');
+			nb *= -1;
+		}
+		if (nb < len)
+			ft_putchar(base[nb]);
+		if (nb >= len)
+		{
+			ft_putnbr_base (nb / len, base);
+			ft_putnbr_base (nb % len, base);
+		}
+	}
+}
+
+
+
+char *ft_convert_base(char *nbr, char *base_from, char *base_to)
+{
+	char	*finalnbr;
+	int		mednbr;
+	int		lenght_nbrf;
+	char	*d;
+
+	if (checkerror(base_to) == 0 || checkerror(base_from) == 0)
+		return (0);
+	mednbr = ft_atoi_base(nbr, base_from);
+	lenght_nbrf = lenght_nbr(mednbr, base_to, 0);
+	d = (finalnbr = (char *)malloc(sizeof(char) * (lenght_nbrf + 1)));
+	if (!d)
+		return (0);
+	ft_putnbr_base(mednbr, base_to, finalnbr);
+	finalnbr[lenght_nbrf] = '\0';
+	return (finalnbr);
+}
+
+#include <stdio.h>
+int main (int ac, char **av)
+{
+	(void)ac;
+	printf("%s", ft_convert_base(av[1], av[2], av[3]));
 }
