@@ -45,9 +45,8 @@ The Piscine is a four-week intensive coding bootcamp designed to test logic, per
 - Build debugging skills and collaborate through peer evaluations.  
   デバッグ力を高め、ピア評価で協働力を養うこと
 
-- Challenge myself and grow as a future engineer.  
-  自分の限界に挑戦し、エンジニアとして成長すること
-
+- Challenge myself.  
+  自分の限界に挑戦!
 ---
 
 ## 📸 Screenshots / Logs スクリーンショットや記録（予定）
