@@ -47,12 +47,6 @@ The Piscine is a four-week intensive coding bootcamp designed to test logic, per
 
 - Challenge myself.  
   自分の限界に挑戦!
----
-
-## 📸 Screenshots / Logs スクリーンショットや記録（予定）
-
-I may add: evaluation results, terminal screenshots, or daily time logs later.  
-今後、評価結果やターミナルのスクリーンショット、日々の記録などを追加するかもしれません。
 
 ---
 
