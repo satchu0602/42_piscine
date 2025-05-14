@@ -1,92 +1,66 @@
-# 42 Tokyo Piscine - My Journey 🌊  
-# 42 Tokyo ピシン - 私の挑戦の記録
+# 42 Tokyo Piscine - My Journey 🌊 42 Tokyo ピシン - 私の挑戦の記録
 
-Welcome to my personal repository documenting my journey through the 42 Tokyo Piscine!  
+Welcome to my personal repository documenting my journey through the 42 Tokyo Piscine.  
 このリポジトリは、42 Tokyo ピシン（選抜試験）での学習記録です。
 
 ---
 
-## 📌 About This Repository  
-## 📌 このリポジトリについて
+## 📌 About This Repository  このリポジトリについて
 
-This repository contains the exercises, challenges, and notes I completed during the 42 Tokyo Piscine.  
-The Piscine is a four-week intensive programming bootcamp that tests logic, perseverance, and adaptability.  
+This repository contains the exercises, challenges, and notes I completed during the Piscine.  
+このリポジトリには、ピシン期間中に取り組んだ課題・演習・ノートをまとめています。
 
-このリポジトリには、ピシン期間中に取り組んだ課題・演習・ノートをまとめています。  
-ピシンとは、42 Tokyoが実施する4週間の選抜プログラムで、論理力・粘り強さ・適応力が試されます。
-
----
-
-## 🧠 What I Worked On  
-## 🧠 取り組んだ内容
-
-- `C00` to `C09`:  
-  Basic C programming (functions, loops, arrays, pointers, memory management, etc.)  
-  → C言語の基礎（関数、ループ、配列、ポインタ、メモリ管理など）
-
-- `Shell00`, `Shell01`:  
-  Shell scripting and UNIX command basics  
-  → シェルスクリプトやUNIXコマンドの基本操作
-
-- `libft`:  
-  A custom C standard library built from scratch  
-  → C言語で一から作るオリジナルの標準ライブラリ
-
-- `exam`:  
-  Practice problems and mock exams  
-  → 試験対策・練習問題の記録
-
-- `rush00`, `rush01`:  
-  Weekend team projects (e.g., simple UI frameworks)  
-  → 週末のチーム課題（簡易UIやフレームワークの作成）
+The Piscine is a four-week intensive coding bootcamp designed to test logic, perseverance, and adaptability.  
+ピシンとは、論理力・粘り強さ・適応力を試す、4週間の集中型プログラミング選抜です。
 
 ---
 
-## 🚀 Goals  
-## 🚀 目標
+## 🧠 What I Worked On  取り組んだ内容
 
-- Learn low-level C programming fundamentals  
-  → C言語の低レイヤー理解を深める
+- `C00` to `C09`: C language basics – loops, pointers, arrays, functions, recursion, memory handling, etc.  
+  `C00`〜`C09`: C言語の基礎（ループ、ポインタ、配列、関数、再帰、メモリ操作など）
 
-- Gain confidence in terminal, shell, and Git operations  
-  → ターミナル・シェル操作・Gitに慣れる
+- `Shell00`, `Shell01`: Basic UNIX commands and shell scripting.  
+  `Shell00`, `Shell01`: UNIXコマンドとシェルスクリプトの基本
 
-- Improve debugging and team collaboration skills  
-  → デバッグ力とチームでの協働力を高める
+- `libft`: Creating a custom C standard library from scratch.  
+  `libft`: Cで一から作る自作標準ライブラリ
 
-- Push my limits and grow as a programmer  
-  → 限界を超えて、エンジニアとして成長する！
+- `exam`: Practice problems and mock exam tasks.  
+  `exam`: 試験対策用の練習問題と模擬試験課題
 
----
-
-## 📸 Screenshots / Logs  
-## 📸 スクリーンショット・ログ（予定）
-
-In the future, I may add:
-- Evaluation scores  
-- Terminal screenshots  
-- Daily time logs and reflections
-
-今後、以下を追加するかもしれません：
-- 評価スコア
-- ターミナルのスクショ
-- 学習ログや振り返り
+- `rush00`, `rush01`: Weekend group projects like UI layout creation in C.  
+  `rush00`, `rush01`: C言語でのUIレイアウト制作など、週末のチームプロジェクト
 
 ---
 
-## 🐢 Author  
-## 🐢 作成者
+## 🚀 Goals  目標
 
-亀山沙月 (Satsuki Kameyama)  
-[LinkedIn](https://www.linkedin.com/in/your-link) ｜ [Twitter](https://twitter.com/your-handle) ｜ [Portfolio](https://your-portfolio-url.com)
+- Master low-level programming fundamentals in C.  
+  C言語で低レイヤーの基礎を習得すること
+
+- Get comfortable with the terminal, Git, and command line tools.  
+  ターミナル・Git・CLIツールに慣れること
+
+- Build debugging skills and collaborate through peer evaluations.  
+  デバッグ力を高め、ピア評価で協働力を養うこと
+
+- Challenge myself and grow as a future engineer.  
+  自分の限界に挑戦し、エンジニアとして成長すること
 
 ---
 
-## 📜 License  
-## 📜 ライセンス
+## 📸 Screenshots / Logs スクリーンショットや記録（予定）
 
-This repository is for educational and documentation purposes only.  
-Please do not copy or submit the code as your own work during the Piscine.
+I may add: evaluation results, terminal screenshots, or daily time logs later.  
+今後、評価結果やターミナルのスクリーンショット、日々の記録などを追加するかもしれません。
 
-このリポジトリは学習・記録用です。  
-ピシン中にこのコードをコピーしたり、自分の成果として提出するのは禁止されています。
+---
+
+## 📜 License ライセンス
+
+This repository is for personal learning and documentation only.  
+このリポジトリは個人的な学習と記録のためのものです。
+
+Please do not copy or submit this code as your own during Piscine.  
+ピシン中にこのコードをコピーしたり、自分の成果として提出するのは禁止です。
